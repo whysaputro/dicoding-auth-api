@@ -1,7 +1,7 @@
 const pool = require('../../database/postgres/pool');
 const UserTableTestHelper = require('../../../../tests/UsersTableTestHelper');
 const container = require('../../container');
-const CreateServer = require('../CreateServer');
+const createServer = require('../CreateServer');
 
 describe('HTTP Server', () => {
   afterEach(async () => {
@@ -12,6 +12,20 @@ describe('HTTP Server', () => {
     await pool.end();
   });
 
+  it('should response 404 when request to unregistered route', async () => {
+    // Arrange
+    const server = await createServer({});
+
+    // Action
+    const response = await server.inject({
+      method: 'GET',
+      url: '/unregisteredRoute',
+    });
+
+    // Assert
+    expect(response.statusCode).toEqual(404);
+  });
+
   describe('when POST /users', () => {
     it('should response 201 and persisted user', async () => {
       // Arrange
@@ -20,7 +34,7 @@ describe('HTTP Server', () => {
         password: 'secret',
         fullname: 'Dicoding Indonesia',
       };
-      const server = await CreateServer(container);
+      const server = await createServer(container);
 
       // Action
       const response = await server.inject({
@@ -43,7 +57,7 @@ describe('HTTP Server', () => {
         password: 'secret',
       };
 
-      const server = await CreateServer(container);
+      const server = await createServer(container);
 
       // Action
       const response = await server.inject({
@@ -67,7 +81,7 @@ describe('HTTP Server', () => {
         fullname: ['Dicoding Indonesia'],
       };
 
-      const server = await CreateServer(container);
+      const server = await createServer(container);
 
       // Action
       const response = await server.inject({
@@ -91,7 +105,7 @@ describe('HTTP Server', () => {
         fullname: 'Dicoding Indonesia',
       };
 
-      const server = await CreateServer(container);
+      const server = await createServer(container);
 
       // Action
       const response = await server.inject({
@@ -115,7 +129,7 @@ describe('HTTP Server', () => {
         fullname: 'Dicoding Indonesia',
       };
 
-      const server = await CreateServer(container);
+      const server = await createServer(container);
 
       // Action
       const response = await server.inject({
@@ -140,7 +154,7 @@ describe('HTTP Server', () => {
         fullname: 'Dicoding Indonesia',
       };
 
-      const server = await CreateServer(container);
+      const server = await createServer(container);
 
       // Action
       const response = await server.inject({
@@ -164,7 +178,7 @@ describe('HTTP Server', () => {
         fullname: 'Dicoding Indonesia',
       };
 
-      const server = await CreateServer({});
+      const server = await createServer({});
 
       // Action
       const response = await server.inject({
