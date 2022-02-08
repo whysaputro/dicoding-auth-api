@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644246992104" clover="3.2.0">
-  <project timestamp="1644246992104" name="All files">
-    <metrics statements="134" coveredstatements="134" conditionals="44" coveredconditionals="42" methods="28" coveredmethods="28" elements="206" coveredelements="204" complexity="0" loc="134" ncloc="134" packages="11" files="18" classes="18"/>
+<coverage generated="1644317797903" clover="3.2.0">
+  <project timestamp="1644317797903" name="All files">
+    <metrics statements="142" coveredstatements="142" conditionals="52" coveredconditionals="50" methods="29" coveredmethods="29" elements="223" coveredelements="221" complexity="0" loc="142" ncloc="142" packages="12" files="19" classes="19"/>
     <package name="src.Applications.security">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PasswordHash.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Applications/security/PasswordHash.js">
@@ -63,6 +63,20 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Domains.authentications.entities">
+      <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="NewAuthentication.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Domains/authentications/entities/NewAuthentication.js">
+        <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Domains.users">
