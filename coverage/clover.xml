@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644317797903" clover="3.2.0">
-  <project timestamp="1644317797903" name="All files">
-    <metrics statements="142" coveredstatements="142" conditionals="52" coveredconditionals="50" methods="29" coveredmethods="29" elements="223" coveredelements="221" complexity="0" loc="142" ncloc="142" packages="12" files="19" classes="19"/>
+<coverage generated="1644318059770" clover="3.2.0">
+  <project timestamp="1644318059770" name="All files">
+    <metrics statements="143" coveredstatements="143" conditionals="52" coveredconditionals="50" methods="30" coveredmethods="30" elements="225" coveredelements="223" complexity="0" loc="143" ncloc="143" packages="12" files="19" classes="19"/>
     <package name="src.Applications.security">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PasswordHash.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Applications/security/PasswordHash.js">
@@ -66,17 +66,18 @@
       </file>
     </package>
     <package name="src.Domains.authentications.entities">
-      <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
       <file name="NewAuthentication.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Domains/authentications/entities/NewAuthentication.js">
-        <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
         <line num="3" count="3" type="stmt"/>
-        <line num="5" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="9" count="2" type="cond" truecount="4" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="4" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Domains.users">
