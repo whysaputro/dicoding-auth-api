@@ -1,5 +1,3 @@
-const AddUserUseCase = require('../../../../Applications/use_case/AddUserUseCase');
-
 class UsersHandler {
   constructor(container) {
     this._container = container;
@@ -8,7 +6,7 @@ class UsersHandler {
   }
 
   async postUserHandler(request, h) {
-    const addUserUseCase = this._container.getInstance(AddUserUseCase.name);
+    const addUserUseCase = this._container.getInstance('AddUserUseCase');
     const addedUser = await addUserUseCase.execute(request.payload);
 
     const response = h.response({

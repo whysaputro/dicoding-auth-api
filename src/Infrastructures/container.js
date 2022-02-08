@@ -19,7 +19,7 @@ const UserRepository = require('../Domains/users/UserRepository');
 // creating container
 const container = createContainer();
 
-// reguster services and repository
+// registering services and repository
 container.register([
   {
     key: UserRepository.name,
@@ -51,7 +51,6 @@ container.register([
 // registering use case
 container.register([
   {
-    key: AddUserUseCase.name,
     Class: AddUserUseCase,
     parameter: {
       injectType: 'destructuring',
