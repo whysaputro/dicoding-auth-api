@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644318059770" clover="3.2.0">
-  <project timestamp="1644318059770" name="All files">
-    <metrics statements="143" coveredstatements="143" conditionals="52" coveredconditionals="50" methods="30" coveredmethods="30" elements="225" coveredelements="223" complexity="0" loc="143" ncloc="143" packages="12" files="19" classes="19"/>
+<coverage generated="1644318789673" clover="3.2.0">
+  <project timestamp="1644318789673" name="All files">
+    <metrics statements="147" coveredstatements="147" conditionals="52" coveredconditionals="50" methods="33" coveredmethods="33" elements="232" coveredelements="230" complexity="0" loc="147" ncloc="147" packages="13" files="20" classes="20"/>
     <package name="src.Applications.security">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="PasswordHash.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Applications/security/PasswordHash.js">
@@ -63,6 +63,16 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Domains.authentications">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="AuthenticationRepository.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Domains/authentications/AuthenticationRepository.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Domains.authentications.entities">
