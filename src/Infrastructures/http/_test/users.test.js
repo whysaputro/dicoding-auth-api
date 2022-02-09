@@ -16,10 +16,11 @@ describe('/users endpoint', () => {
     it('should response 201 and persisted user', async () => {
       // Arrange
       const requestPayload = {
-        username: 'dicoding',
+        username: 'hendra',
         password: 'secret',
-        fullname: 'Dicoding Indonesia',
+        fullname: 'Hendra Wahyu',
       };
+
       const server = await createServer(container);
 
       // Action

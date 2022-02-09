@@ -23,7 +23,7 @@ describe('/authentications endpoint', () => {
       };
 
       const server = await createServer(container);
-
+      // add user
       await server.inject({
         method: 'POST',
         url: '/users',
@@ -34,13 +34,14 @@ describe('/authentications endpoint', () => {
         },
       });
 
+      // Action
       const response = await server.inject({
         method: 'POST',
         url: '/authentications',
         payload: requestPayload,
       });
 
-      console.log(JSON.parse(response.payload));
+      // Assert
       expect(response.statusCode).toEqual(201);
     });
   });
