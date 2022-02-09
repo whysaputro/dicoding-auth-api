@@ -47,7 +47,7 @@ describe('a RegisterUser entities', () => {
     expect(() => new RegisterUser(payload)).toThrowError('REGISTER_USER.USERNAME_CONTAIN_RESTRICTED_CHARACTER');
   });
 
-  it('should create registerUser object correctyly', () => {
+  it('should create registerUser object correctly', () => {
     // Arrange
     const payload = {
       username: 'dicoding',
