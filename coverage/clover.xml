@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644376996733" clover="3.2.0">
-  <project timestamp="1644376996733" name="All files">
-    <metrics statements="156" coveredstatements="156" conditionals="60" coveredconditionals="58" methods="36" coveredmethods="36" elements="252" coveredelements="250" complexity="0" loc="156" ncloc="156" packages="13" files="21" classes="21"/>
+<coverage generated="1644377997517" clover="3.2.0">
+  <project timestamp="1644377997517" name="All files">
+    <metrics statements="157" coveredstatements="157" conditionals="60" coveredconditionals="58" methods="37" coveredmethods="37" elements="254" coveredelements="252" complexity="0" loc="157" ncloc="157" packages="13" files="21" classes="21"/>
     <package name="src.Applications.security">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="PasswordHash.js" path="/Users/whysaputro/Course/Dicoding/Backend Expert/auth-api/src/Applications/security/PasswordHash.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.Applications.use_case">
