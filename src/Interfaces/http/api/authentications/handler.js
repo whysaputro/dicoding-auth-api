@@ -3,6 +3,7 @@ class AuthenticationHandler {
     this._container = container;
 
     this.postAuthenticationHandler = this.postAuthenticationHandler.bind(this);
+    this.putAuthenticationHandler = this.putAuthenticationHandler.bind(this);
   }
 
   async postAuthenticationHandler(request, h) {
@@ -19,6 +20,18 @@ class AuthenticationHandler {
 
     response.code(201);
     return response;
+  }
+
+  async putAuthenticationHandler(request) {
+    const refreshAuthenticationUseCase = this._container.getInstance('RefreshAuthenticationUseCase');
+    const accessToken = await refreshAuthenticationUseCase.execute(request.payload);
+
+    return {
+      status: 'success',
+      data: {
+        accessToken,
+      },
+    };
   }
 }
 

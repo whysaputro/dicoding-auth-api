@@ -27,4 +27,16 @@ describe('AuthenticationRepositoryPostgres', () => {
       expect(token[0].token).toEqual(refreshToken);
     });
   });
+
+  describe('verifyRefreshToken function', () => {
+    it('should throw InvariantError if refresh token not available in the database', async () => {
+      // Arrange
+      const authenticationRepositoryPostgres = new AuthenticationRepositoryPostgres(pool);
+      const refreshToken = 'refresh_token';
+
+      // Action and assert
+      await expect(() => authenticationRepositoryPostgres.verifyRefreshToken(refreshToken))
+        .rejects.toThrowError(InvariantError);
+    });
+  });
 });
