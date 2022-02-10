@@ -4,6 +4,7 @@ class AuthenticationHandler {
 
     this.postAuthenticationHandler = this.postAuthenticationHandler.bind(this);
     this.putAuthenticationHandler = this.putAuthenticationHandler.bind(this);
+    this.deleteAuthenticationHandler = this.deleteAuthenticationHandler.bind(this);
   }
 
   async postAuthenticationHandler(request, h) {
@@ -31,6 +32,15 @@ class AuthenticationHandler {
       data: {
         accessToken,
       },
+    };
+  }
+
+  async deleteAuthenticationHandler(request) {
+    const deleteAuthenticationUseCase = this._container.getInstance('DeleteAuthenticationUseCase');
+    await deleteAuthenticationUseCase.execute(request.payload);
+
+    return {
+      status: 'success',
     };
   }
 }

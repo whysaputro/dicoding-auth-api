@@ -17,11 +17,12 @@ const JwtTokenManager = require('./security/JwtTokenManager');
 // use case
 const AddUserUseCase = require('../Applications/use_case/AddUserUseCase');
 const LoginUserUseCase = require('../Applications/use_case/LoginUserUseCase');
+const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAuthenticationUseCase');
+const DeleteAuthenticationUseCase = require('../Applications/use_case/DeleteAuthenticationUseCase');
 const PasswordHash = require('../Applications/security/PasswordHash');
 const AuthenticationTokenManager = require('../Applications/security/AuthenticationTokenManager');
 const UserRepository = require('../Domains/users/UserRepository');
 const AuthenticationRepository = require('../Domains/authentications/AuthenticationRepository');
-const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAuthenticationUseCase');
 
 // creating container
 const container = createContainer();
@@ -131,6 +132,18 @@ container.register([
         {
           name: 'authenticationTokenManager',
           internal: AuthenticationTokenManager.name,
+        },
+      ],
+    },
+  },
+  {
+    Class: DeleteAuthenticationUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'authenticationRepository',
+          internal: AuthenticationRepository.name,
         },
       ],
     },

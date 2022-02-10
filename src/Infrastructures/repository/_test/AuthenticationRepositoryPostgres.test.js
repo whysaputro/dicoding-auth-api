@@ -38,5 +38,34 @@ describe('AuthenticationRepositoryPostgres', () => {
       await expect(() => authenticationRepositoryPostgres.verifyRefreshToken(refreshToken))
         .rejects.toThrowError(InvariantError);
     });
+
+    it('should not throw InvariantError if refresh token avaliable in the database', async () => {
+      // Arrange
+      const authenticationRepositoryPostgres = new AuthenticationRepositoryPostgres(pool);
+      const refreshToken = 'refresh_token';
+
+      await AuthenticationTableTestHelper.addToken(refreshToken);
+
+      // Action and assert
+      expect(() => authenticationRepositoryPostgres.verifyRefreshToken(refreshToken))
+        .not.toThrowError(InvariantError);
+    });
+  });
+
+  describe('deleteRefreshToken function', () => {
+    it('should delete refresh token correctly', async () => {
+      // Arrange
+      const authenticationRepositoryPostgres = new AuthenticationRepositoryPostgres(pool);
+      const refreshToken = 'refresh_token';
+
+      await AuthenticationTableTestHelper.addToken(refreshToken);
+
+      // Action
+      await authenticationRepositoryPostgres.deleteRefreshToken(refreshToken);
+
+      // Assert
+      const token = await AuthenticationTableTestHelper.findToken(refreshToken);
+      expect(token).not.toHaveLength(1);
+    });
   });
 });
