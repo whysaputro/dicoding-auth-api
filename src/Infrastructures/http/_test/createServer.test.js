@@ -46,7 +46,7 @@ describe('when GET /', () => {
     const server = await createServer({});
 
     // Action
-    const response = server.inject({
+    const response = await server.inject({
       method: 'GET',
       url: '/',
     });
