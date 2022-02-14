@@ -1,5 +1,4 @@
-/* instanbul ignore file */
-
+/* istanbul ignore file */
 const { Pool } = require('pg');
 
 const testConfig = {
